@@ -1,7 +1,7 @@
 // @ts-nocheck
 /**
  * Arquivo: src/routes/composition.routes.js
- * Descrição: arquivo responsável pelas rotas da api relacionado a classe 'Product'.
+ * Descrição: arquivo responsável pelas rotas da api relacionado a classe 'Composition'.
  * Data: 29/12/2020
  * Author: Thiago Negreiros
  */
@@ -19,5 +19,12 @@ router.get('/composition', compositionController.listAllComposition);
 
 //* ==> Rota responsável por selecionar 'Composition' pelo 'Id': (GET): localhost:3333/composition/:id
 router.get('/composition/:id', compositionController.findCompositionById);
+
+//* ==> Rota responsável por atualizar 'Composition' pelo 'Id': (PUT): localhost: 3333/composition/:id
+router.put('/composition/:id', compositionController.updateCompositionById);
+
+//* ==> Rota responsável por excluir 'Composition' pelo 'Id': (DELETE): localhost:3333/composition/:id
+router.delete('/composition/:id', compositionController.deleteCompositionById);
+
 
 module.exports = router;
